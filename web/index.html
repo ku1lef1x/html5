@@ -1,0 +1,123 @@
+<!--
+Todo codigo HTML esta formado por etiquetas. Las etiquetas tendrían una estructura similar a esta:
+
+ <nombre> </nombre>
+**Cada etiqueta tiene una función, existen multitud de tarjetas distintas para texto, datos, imágenes...**
+
+Las etiquetas pueden tener atributos, estos modifican el comportamiento de la etiqueta principal.
+<etiqueta atributo="valor"> Texto o datos </etiqueta>
+
+Un ejemplo de etiqueta en negrita:
+<strong>Hola mundo desde HTML</strong>
+
+Un ejemplo de etiqueta con encabezado de tamaño h3:
+<h3>Hola mundo 2</h3>
+
+No obstante, un documento HTML debe seguir una estructura estándar que sería la siguiente:
+ -->
+ <!DOCTYPE HTML> <!-- indicamos que usaremos la ultima version -->
+ <html lang="es"> <!-- dentro de esta etiqueta se pone todo el contenido de nuestra web, puede llevar atributos como lang, para el lenguaje> -->
+ 	<head> 
+ 		<!--Encabezado, no se mostrará en nuestra web, se utiliza para introducir metadatos, un titulo para la pagina...Podremos indicar la codificación de caracteres, el estilo que va a tener-->
+ 		<title>Mi primera web</title><!--Este title se muestra en la pestaña-->
+ 	</head>
+ 	<body>
+ 		<!--Aqui tendríamos el contenido de la web en si--> 		
+ 		<h1>Titulo de mi web</h1>
+ 		<!--Tenemos etiquetas hasta la numero 6, a menor numero mayor tamaño, solo se recomienda un h1.-->
+ 		<h2>Bienvenidos a mi web</h2>
+ 		<!--Principales etiquetas de texto-->
+ 		<!--Parrafo y salto de linea-->
+ 		<!-- <p></p> y <br/> esta ultima da un salto de linea(dar un enter en el texto)-->
+ 		<p>
+ 			Ejemplo de parrafo 1:<br/>Ejemplo de parrafo con un salto de linea despues de los dos puntos
+ 		</p>
+ 		<p>
+ 		Ejemplo de parrafo 2: en este caso sin salto de linea despues de los dos puntos
+ 		</p>
+ 		<!--</hr> da un salto de linea con una linea-->
+ 		<p>
+ 			Ejemplo de parrafo 3:<br/>en este caso damos un salto de linea y ademas añadimos una etiqueta hr para marcar el final de nuestros parrafos con una linea
+ 		</p>
+ 		<hr/>
+
+ 		<!--Podemos añadir imagenes a nuestras webs, para ello, en primer lugar, creamos dentro de la carpeta web una carpeta llamada imagenes, donde se incluiran las distintas imagenes
+ 		Se añaden con la etiqueta img que no tiene contenido de texto y se cierra como hr o br. img tiene varios atributos importantes que son
+ 		src="" Donde se indica la ruta relativa de la localizacion de la imagen
+ 		alt="" Donde se introduce un texto que se muestra si no se carga la imagen y ademas lo identifica
+ 		title:"" Para cuando pasemos por encima de la imagen un pequeño popUp nos muestre el titulo
+ 		width="" Anchura
+ 		height="" Altura
+ 		-->
+ 		<p>
+ 			<h2>Imágenes en HTML</h2>
+ 			<img 
+ 			src="imagenes/perro_y_gato.jpg"
+ 			alt="Imagen de perro y gato"
+ 			title="Foto de perro y gato"
+ 			width="550px"
+ 			height="500px"/>
+ 			<img 
+ 			src="imagenes/nutria.jpg"
+ 			alt="Imagen de nutria"
+ 			title="Foto de una nutria"
+ 			width="550px"/>
+ 			<!--Podemos usar width y height o solo uno-->
+ 		</p>
+ 		<hr/>
+ 		
+ 		<!--Añadimos una etiqueta h3 para un tercer encabezado de la pagina y tras el otro parrafo en el que probaremos nuevas etiquetas de texto:
+ 		<strong>texto en negrita</strong>
+ 		<em>texto en cursiva</em>
+ 		<span>texto</span> no hace nada sobre el texto pero nos permite añadir un atributo
+ 		id="resaltado" para por ej darle un identificador, le podemos añadir tambien una clase que posteriormente en css nos permitirá agregar estilos mas rapidamente
+		<i>que tambien permite poner un texto en cursiva</i>
+		<blockquote>el texto aqui dentro aparecera en formato cita</blockquote>
+ 		-->
+ 		<h3>Tercer encabezado de la página</h3>
+ 		<p>
+ 			En este párrafo probaremos todas las etiquetas vistas hasta ahora:<br/>
+ 			<strong>Con strong podemos poner un texto o palabra en negrita</strong>
+ 			También tenemos la etiqueta em para poner un <em>texto en cursiva</em> o la etiqueta span que no hace nada sobre un texto pero permite añadir identificadores<span id="resaltado" class="rojo amarillo"> para posteriormente en css dar un estilo mas rapido</span><br/>Tambien tenemos la etiqueta i, que al igual que em pone un <i>texto en cursiva</i><br/>Por último veremos la etiqueta blockquote que permite poner un texto tipo cita como el siguiente:<br/><blockquote>Texto en formato cita que recibe una tabulacion y espaciado distinto a los demas.</blockquote>
+ 		</p>
+
+ 		<!--En ocasiones existe la necesidad de agrupar distintos elementos (por ejemplo un conjunto de frutas, localizaciones...) en listas. Estas listas pueden ser ordenadas o desordenadas y después se mostrarán al usuario con puntos, numeros, etc
+ 		Las listas ordenadas se realizan con <ol></ol>, dentro de ol, con <li></li> vamos creando los distintos elementos 
+ 		con <ul></ul> creamos listas desordenadas. 
+ 		-->
+ 		<h3>Listas:</h3>
+ 		<p>
+ 			Lista ordenada de frutas:
+ 			<ol>
+ 				<li>Naranja</li>
+ 				<li>Sandía</li>
+ 				<li>Pera</li>
+ 				<li>Melocotón</li>
+ 			</ol> 			
+ 			Lista desordenada de frutas:
+ 			<ul>
+ 				<li>Naranja</li>
+ 				<li>Sandía</li>
+ 				<li>Pera</li>
+ 				<li>Melocotón</li>
+ 			</ul> 	
+ 			Dentro de una lista podemos añadir puntos dentro de otros puntos, por ejemplo:
+ 			<ol>
+ 				<li>Naranja</li>
+ 				<li>Sandía</li>
+ 				<li>Manzana
+ 					<ul>
+ 						<li>Roja</li>
+ 						<li>Verde</li>
+ 						<li>Amarilla</li>
+ 					</ul>
+ 				</li>
+ 				<li>Pera</li>
+ 				<li>Melocotón</li> 				
+ 			</ol> 			
+ 		</p>
+ 		<!--Tablas: podemos crear distintas tablas con columnas y filas, en las que introduciremos distinta informacion.Hace años las webs se maquetaban con tablas, pero hoy dia eso esta mal hecho y se realiza con css y el modelo de cajas, moviendo segun el diseño requiera
+ 		Las tablas son por tanto una forma de organizar la informacion-->
+ 		<h3>Tablas:</h3>
+ 	</body> 
+ </html>
